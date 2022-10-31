@@ -7,6 +7,7 @@ const { app, ipcMain } = require('electron');
 const { Microsoft } = require('minecraft-java-core');
 const { autoUpdater } = require('electron-updater')
 
+
 const path = require('path');
 const fs = require('fs');
 
@@ -98,3 +99,31 @@ autoUpdater.on('download-progress', (progress) => {
     const updateWindow = UpdateWindow.getWindow();
     if (updateWindow) updateWindow.webContents.send('download-progress', progress);
 })
+
+
+const DiscordRPC = require('discord-urpc');
+const uRPC = new DiscordRPC({ clientID: '1030903164850929675', debug: true || false });
+ 
+uRPC.on('ready', () => {
+    const args = {
+        pid: process.pid,
+        activity: {
+            state: 'Hanadia',
+            details: 'Dans le launcher',
+            timestamps: {
+                start: new Date().getTime() / 1000
+            },
+            assets: {
+                large_image: 'http://46.105.227.12/plesk-site-preview/hanadia.ml/https/46.105.227.12/storage/img/hanadia-png.png',
+                large_text: 'Hanadia',
+                small_image: 'http://46.105.227.12/plesk-site-preview/hanadia.ml/https/46.105.227.12/storage/img/hanadia-png.png',
+                small_text: 'Minecraft Custom Launcher',
+            },
+            // party,
+            // secrets,
+            instance: true,
+        }
+    };
+ 
+    uRPC.send('SET_ACTIVITY', args);
+});

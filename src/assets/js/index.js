@@ -22,9 +22,9 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Je... vie...", "author": "Luuxis" },
-            { "message": "Salut je suis du code.", "author": "Luuxis" },
-            { "message": "Linux n' ai pas un os, mais un kernel.", "author": "Luuxis" }
+            { "message": "Hanadia est un serveur PVP Faction", "author": "Gwada" },
+            { "message": "Salut je suis du code.", "author": "Flipper0ff" },
+            { "message": "Il aura un bon avenir.", "author": "Dario" }
         ]
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -49,7 +49,7 @@ class Splash {
         ipcRenderer.invoke('update-app').then(err => {
             if (err.error) {
                 let error = err.message;
-                this.shutdown(`erreur lors de la recherche de mise à jour :<br>${error}`);
+                this.shutdown(`Erreur lors de la recherche de mise à jour :<br>${error}`);
             }
         })
 

@@ -1,12 +1,12 @@
 .bottom-bar-home {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    height: 70px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    width: 70%;
+    height: 80px;
+    border-radius: 20px;
     background: #00000080;
     display: flex;
+    margin: 1rem 1rem;
 }
 
 .player-head {
@@ -19,7 +19,7 @@
     width: 50px;
     height: 50px;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
 }
 
@@ -33,9 +33,10 @@
     top: 10px;
     right: 30px;
     text-align: center;
-    height: 50px;
+    height: 55px;
+    width: 55px;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
 }
 
@@ -59,16 +60,19 @@
 }
 
 .play-btn {
-    top: 10px;
-    width: 160px;
-    height: 37px;
-    border-radius: 20px;
+    position: absolute;
+    bottom: 8px;
+    width: 25%;
+    height: 73px;
+    border-radius: 10px;
     border: none;
-    background: #00bd7a;
+    background: #5b7fff;
     font: normal normal bold 20px/25px Poppins;
     color: #121212;
-    margin: 15px 0;
-    box-shadow: 0 0 5px #00bd7a;
+    margin: 15px;
+    /*margin-left: 1250px 190%;*/
+    right: 10px;
+    box-shadow: 0 0 5px #5b7fff;
 }
 
 .download-content {
@@ -84,12 +88,12 @@
 }
 
 .text-download {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .progress-bar {
     background-color: transparent;
-    height: 10px;
+    height: 20px;
 }
 
 .progress-bar::-webkit-progress-bar {
@@ -98,14 +102,18 @@
 }
 
 .progress-bar::-webkit-progress-value {
-    background-color: #00bd7a;
+    background-color: #5b7fff;
     border-radius: 10px;
 }
 
 .body-home {
     display: flex;
     height: 78vh;
-    margin: 3rem 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 85%;
+    opacity: 0.8;
 }
 
 .news-list {
@@ -121,7 +129,7 @@
 .news-block {
     margin-bottom: 1rem;
     transition: opacity 1s;
-    opacity: .4;
+    opacity: .8;
 }
 
 .news-block:hover {

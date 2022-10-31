@@ -1,11 +1,11 @@
 {
-    "name": "Selvania-Launcher",
-    "preductname": "Selvania Launcher",
+    "name": "Hanadia-Launcher",
+    "preductname": "Hanadia Launcher",
     "version": "1.0.5",
     "description": "Launcher Mincraft custom (crack, premium)",
     "main": "src/app.js",
     "author": "Luuxis",
-    "url": "http://launcher.selvania.fr",
+    "url": "http://46.105.227.12/plesk-site-preview/launcher.hanadia.ml/https/46.105.227.12/",
     "engines": {
         "node": "16.x.x"
     },
@@ -19,6 +19,8 @@
         "ext": "js,html,css"
     },
     "dependencies": {
+        "discord-rpc-electron": "^4.0.1",
+        "discord-urpc": "^1.0.1",
         "electron-updater": "^5.0.1",
         "minecraft-java-core": "^2.4.1",
         "node-fetch": "^2.6.7"
@@ -31,6 +33,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
+        "url": "git+github.com:Gwada33/Selvania-Launcher.git"
     }
 }
